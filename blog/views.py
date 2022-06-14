@@ -12,7 +12,7 @@ def detail(request, category_slug, slug):
            comment = form.save(commit=False)
            comment.post = post
            comment.save()
-           return redirect('post_detail',slug=slug)
+           return redirect('post_detail', category_slug=category_slug, slug=slug)
         else:
             form = CommentForm()
     return render(request, 'blog/detail.html',{'post': post, 'form': form})
