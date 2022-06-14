@@ -131,3 +131,5 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import django_heroku
 django_heroku.settings(locals())
+CSRF_TRUSTED_ORIGINS = ['https://lit-garden-50025.herokuapp.com/admin/login/?next=/admin/']
+
